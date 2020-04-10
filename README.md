@@ -51,8 +51,13 @@ yarn config set registry https://registry.npm.taobao.org
 2. class X extends React.Component
 3. const X = (props) => { return (......)}
 创建函数式组件（无状态组件）
-1） 无需state，即不处理用户的输入，组件的所有的数据都是依赖props传入的
+1）无需state，即不处理用户的输入，组件的所有的数据都是依赖props传入的
 2）不需要用到生命周期函数
 好处
 1）不需要声明类，可以避免大量的譬如extends或者constructor这样的代码
 2）不需要显示声明this关键字，在ES6的类声明中往往需要将函数的this关键字绑定到当前作用域，而因为函数式声明的特性，我们不需要再强制绑定
+
+## react组件间传值
+
+父组件给子组件传递参数是通过props（向下传递）
+子组件给父组件传递参数是通过父组件提供的回调函数（向上传递）
